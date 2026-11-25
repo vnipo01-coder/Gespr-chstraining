@@ -218,3 +218,17 @@ button:disabled{opacity:.45;cursor:not-allowed}
 @media(max-width:450px){.brand{gap:8px}.brand-mark{height:37px;width:37px}.constellation{height:225px}.orbit-node{padding:9px;font-size:10px}.hero-metrics{gap:11px}.hero-actions .primary-btn{width:100%}.reader-toolbar button{font-size:11px}.morph{flex:1;min-width:115px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.orbit{animation:none}.hero *,.card,.sidebar,.toast{transition:none}}
 @media print{.sidebar,.topbar,.footer,.reader-toolbar,.hero-actions,.toast,.top-actions{display:none!important}.shell-body{display:block}.app-content{max-width:none;padding:0}.reader-panel{border:0}.reader-paper p{color:#111}.reader-panel,.card{break-inside:avoid}}
+
+
+/* Sprachwerkstatt: freies, vorsichtiges Nachschlagen und heuristische Diskursanalyse. */
+.lab-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.lab-tool{border:1px solid var(--rule);border-radius:16px;background:#fff;padding:clamp(22px,3vw,32px);min-width:0}
+.lab-tool h3{margin:14px 0 9px;font-size:19px}
+.lab-tool>p{font-size:13px;color:#6b7790;line-height:1.8;min-height:93px}
+.lab-tool .search-control{width:100%;max-width:none}
+.lab-tool textarea{width:100%;margin:0}
+.lab-result{margin-top:18px;padding:16px 18px;border:1px solid #e3e7f0;background:#f8f9fd;border-radius:10px;color:#69768e;font-size:12px;line-height:1.8;min-height:66px;overflow-wrap:anywhere;white-space:normal}
+.lab-result strong{display:block;color:#394e72;font-size:13px}
+.lab-result p{margin:8px 0}
+.lab-result .pills{margin-top:8px}
+@media(max-width:1000px){.lab-tools{grid-template-columns:1fr}.lab-tool>p{min-height:0}}
