@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#141c37">
+  <meta name="description" content="LOGOS ATELIER verbindet Etymologie, Sprachstruktur, Rhetoriktraining, Selbstvertrauen und achtsame Praxis in einer offenen Lernplattform.">
+  <meta name="color-scheme" content="light">
+  <title>LOGOS ATELIER · Sprache verstehen. Präsenz entwickeln.</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./data.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#app">Zum Inhalt springen</a>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="#/start" aria-label="LOGOS ATELIER – Startseite"><span class="brand-mark" aria-hidden="true"><span>λ</span></span><span class="brand-copy"><strong>LOGOS<span>ATELIER</span></strong><small>SPRACHE · PRÄSENZ · BEWUSSTSEIN</small></span></a>
+      <div class="top-actions">
+        <span class="edition">DIE OFFENE SPRACHWERKSTATT</span>
+        <a class="top-resources" href="#/quellen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> Quellen</a>
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="sidebar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      </div>
+    </header>
+    <div class="shell-body">
+      <aside class="sidebar" id="sidebar" aria-label="Hauptnavigation">
+        <div class="side-overline">DEIN LERNRAUM</div>
+        <nav class="side-nav">
+          <a href="#/start" data-nav="start"><span class="nav-icon">⌂</span><span>Übersicht</span></a>
+          <a href="#/sprache" data-nav="sprache"><span class="nav-icon">λ</span><span>Sprachlabor</span></a>
+          <a href="#/rhetorik" data-nav="rhetorik"><span class="nav-icon">◉</span><span>Rhetorikstudio</span></a>
+          <a href="#/coaching" data-nav="coaching"><span class="nav-icon">↗</span><span>Präsenz-Coach</span></a>
+        </nav>
+        <div class="side-overline side-second">INNERE PRAXIS</div>
+        <nav class="side-nav">
+          <a href="#/meditation" data-nav="meditation"><span class="nav-icon">◌</span><span>Meditation & Atem</span></a>
+          <a href="#/chakras" data-nav="chakras"><span class="nav-icon">✳</span><span>Chakra-Traditionen</span></a>
+        </nav>
+        <div class="side-overline side-second">WERKZEUGE</div>
+        <nav class="side-nav">
+          <a href="#/fortschritt" data-nav="fortschritt"><span class="nav-icon">▥</span><span>Meine Praxis</span></a>
+          <a href="#/quellen" data-nav="quellen"><span class="nav-icon">↗</span><span>Quellen & Methode</span></a>
+        </nav>
+        <div class="sidebar-bottom"><div class="side-quote"><span>„</span><p>Die Fähigkeit zu sprechen wächst durch das Sprechen – nicht durch den Anspruch, sofort perfekt zu sein.</p></div><small>LOGOS ATELIER · V0.1</small></div>
+      </aside>
+      <main id="app" class="app-content" tabindex="-1" aria-live="polite"></main>
+    </div>
+    <footer class="footer"><span>LOGOS ATELIER · Sprache verstehen. Präsenz entwickeln.</span><span>Wissenschaftlich informieren · achtsam üben · selbständig entscheiden</span></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
