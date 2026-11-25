@@ -17,9 +17,14 @@ jobs:
       - name: Check JavaScript syntax
         run: |
           node --check data.js
+          node --check lexicon-v2.js
+          node --check rhetoric-v2.js
+          node --check audio-coach.js
           node --check app.js
       - name: Run research and user-interface smoke tests
         run: node tests/smoke.cjs
+      - name: Check microphone opt-in and disposal in simulated audio session
+        run: node tests/audio-coach.cjs
       - name: Check required app files
         run: |
           test -s index.html
