@@ -86,7 +86,7 @@ const compounds=[
 ["Sozialhilfe","Sozial","","Hilfe","Sozialhilfe bezeichnet materielle und persönliche Unterstützung nach jeweils geltender Rechtsordnung.","«Ich trenne wissenschaftliche Argumente von Rechtsansprüchen.»"],
 ["Sozialversicherung","Sozial","","Versicherung","Sozialversicherung bezeichnet Systeme gesetzlich geregelter Absicherung definierter Risiken.","«Ich prüfe die zuständige Versicherungsleistung.»"],
 ["Rechtssicherheit","Recht","s","Sicherheit","Rechtssicherheit bezeichnet die Vorhersehbarkeit und Verlässlichkeit rechtlicher Ordnung.","«Ich begründe den Entscheid anhand einer überprüfbaren Rechtsgrundlage.»"],
-["Sachverhalt","Sach","","Verhalt","Sachverhalt ist der für eine Fragestellung erhebliche Tatsachenzusammenhang.","«Ich dokumentiere, was bekannt und was noch ungeklärt ist.»"],
+["Sachstand","Sach","","Stand","Sachstand bezeichnet den zum Zeitpunkt der Aussage bekannten Stand einer Angelegenheit.","«Ich dokumentiere, was bekannt und was noch ungeklärt ist.»"],
 ["Lebenslage","Leben","s","Lage","Lebenslage bezeichnet die konkrete Kombination von Ressourcen und Einschränkungen einer Person.","«Ich frage nach Wohnen, Arbeit und verfügbaren Beziehungen.»"],
 ["Lebenslauf","Leben","s","Lauf","Lebenslauf bezeichnet den zeitlichen Verlauf von Lebensereignissen oder eine biografische Darstellung.","«Ich ordne die wichtigsten Schritte chronologisch.»"],
 ["Zuständigkeitsbereich","Zuständigkeit","s","Bereich","Ein Zuständigkeitsbereich benennt abgegrenzte institutionelle Aufgaben.","«Ich frage, wer für diesen Teil verantwortlich ist.»"],
@@ -144,18 +144,18 @@ function negation(word,prefix,stem,meaning,usage){
  source:["idsderivation"]});
 }
 const prefixes=[
-["Unruhe","un","Ruhe","Unruhe bezeichnet den Zustand fehlender Ruhe oder innerer Bewegung.","«Ich darf Unruhe bemerken, ohne mich dafür zu bewerten.»"],
-["Unklarheit","un","Klarheit","Unklarheit bezeichnet einen Mangel an Klarheit und Verständlichkeit.","«Bei einer Unklarheit frage ich nach.»"],
-["Unsicherheit","un","Sicherheit","Unsicherheit bezeichnet fehlende Gewissheit oder subjektive Stabilität.","«Ich kann bei Unsicherheit einen überprüfbaren Schritt wählen.»"],
-["Unhöflichkeit","un","Höflichkeit","Unhöflichkeit bezeichnet einen Verstoss gegen erwartete Umgangsformen.","«Ich benenne konkretes Verhalten statt die Person abzuwerten.»"],
-["Ungeduld","un","Geduld","Ungeduld bezeichnet Schwierigkeiten mit dem Warten oder der Verzögerung.","«Ich prüfe, ob die Eile wirklich notwendig ist.»"],
-["Unverständnis","un","Verständnis","Unverständnis bezeichnet fehlendes Verstehen oder eine ablehnende Reaktion.","«Ich frage, welcher Teil noch unverständlich ist.»"],
-["Unabhängigkeit","un","Abhängigkeit","Unabhängigkeit bezeichnet das Nichtgebundensein an eine bestimmte Abhängigkeit.","«Ich kläre, wo ich frei entscheiden kann.»"],
-["Unwirksamkeit","un","Wirksamkeit","Unwirksamkeit bezeichnet das Fehlen der beabsichtigten Wirkung.","«Ich untersuche, weshalb die Massnahme nicht wie geplant wirkt.»"],
-["Missverständnis","Miss","verständnis","Missverständnis bezeichnet eine fehlerhafte Deutung einer Äusserung.","«Ich fasse noch einmal zusammen, was ich verstanden habe.»"],
-["Missachtung","Miss","achtung","Missachtung bezeichnet fehlende gebotene Beachtung oder Respekt.","«Ich beschreibe eine konkrete Missachtung statt pauschal zu urteilen.»"],
-["Missdeutung","Miss","deutung","Missdeutung bezeichnet eine unzutreffende Interpretation.","«Ich prüfe alternative Lesarten, bevor ich antworte.»"],
-["Missbrauch","Miss","brauch","Missbrauch bezeichnet eine zweckwidrige oder schädigende Verwendung.","«Ich nutze das Wort nur bei klar definiertem Sachverhalt.»"]
+["unruhig","un","ruhig","Unruhig bezeichnet eine innere oder äussere Bewegung ohne erlebte Ruhe.","«Ich darf Unruhe bemerken, ohne mich dafür zu bewerten.»"],
+["unklar","un","klar","Unklar bezeichnet eine fehlende Eindeutigkeit oder Verständlichkeit.","«Bei einer Unklarheit frage ich nach.»"],
+["unsicher","un","sicher","Unsicher bezeichnet einen Zustand fehlender Gewissheit oder Stabilität.","«Ich kann bei Unsicherheit einen überprüfbaren Schritt wählen.»"],
+["unhöflich","un","höflich","Unhöflich beschreibt ein Verhalten, das als Verstoss gegen Umgangsformen gilt.","«Ich benenne konkretes Verhalten statt die Person abzuwerten.»"],
+["ungeduldig","un","geduldig","Ungeduldig beschreibt eine geringe Bereitschaft zum Warten oder zur Verzögerung.","«Ich prüfe, ob die Eile wirklich notwendig ist.»"],
+["unverständlich","un","verständlich","Unverständlich beschreibt etwas, das nicht hinreichend verstanden werden kann.","«Ich frage, welcher Teil noch unverständlich ist.»"],
+["unabhängig","un","abhängig","Unabhängig bezeichnet einen Zustand ohne eine bestimmte Abhängigkeit.","«Ich kläre, wo ich frei entscheiden kann.»"],
+["unwirksam","un","wirksam","Unwirksam beschreibt etwas, das die beabsichtigte Wirkung nicht erzielt.","«Ich untersuche, weshalb die Massnahme nicht wie geplant wirkt.»"],
+["missverstehen","miss","verstehen","Missverstehen bezeichnet eine fehlerhafte Deutung einer Äusserung.","«Ich fasse noch einmal zusammen, was ich verstanden habe.»"],
+["missachten","miss","achten","Missachten bezeichnet das Nichtbeachten einer Person oder Regel.","«Ich beschreibe eine konkrete Missachtung statt pauschal zu urteilen.»"],
+["missdeuten","miss","deuten","Missdeuten bezeichnet eine unzutreffende Interpretation.","«Ich prüfe alternative Lesarten, bevor ich antworte.»"],
+["missbrauchen","miss","brauchen","Missbrauchen bezeichnet eine zweckwidrige oder schädigende Verwendung.","«Ich nutze das Wort nur bei klar definiertem Sachverhalt.»"]
 ];
 // Die Präfixanalyse kann bei komplexen Wörtern verschiedene Hierarchien zulassen; nur transparente Bildung zulassen.
 for(const [word,prefix,stem,meaning,use] of prefixes)negation(word,prefix,stem,meaning,use);
