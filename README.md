@@ -19,9 +19,18 @@ Eine eigenständige, deutschsprachige, statische Web-App für sprachwissenschaft
 Reines HTML, CSS und JavaScript; keine Registrierung, kein Backend und keine Tracker. Übungsfortschritt kann im Browser-localStorage gespeichert werden. Sprachaufnahmen werden nicht automatisch gemacht oder hochgeladen. Optionale Browser-Spracherkennung wird nur nach explizitem Klick und Mikrofonberechtigung gestartet; abhängig vom Browser kann die Verarbeitung über einen externen Dienst erfolgen. Es werden keine Audio- oder Transkriptdateien auf dem Server gespeichert.
 
 ## Lokal starten
-`python3 -m http.server 8000` und `http://localhost:8000` öffnen. Statische Veröffentlichung über GitHub Pages ist möglich (Repository-Einstellungen > Pages > Deploy from a branch, main/root). Für Spracherkennung wird ein unterstützter Browser und in der Regel HTTPS oder localhost benötigt.
+`python3 -m http.server 8000` und `http://localhost:8000` öffnen. Ein GitHub-Actions-Workflow prüft die App und deployt sie anschliessend über GitHub Pages. Dafür muss im Repository unter **Settings > Pages > Build and deployment > Source: GitHub Actions** gewählt werden. Ohne diese Einstellung ist die Seite möglicherweise noch nicht online. Für Spracherkennung wird ein unterstützter Browser und in der Regel HTTPS oder localhost benötigt.
 
 ## Lizenz
-Eigene Texte und Quellcode dieses Repositories: MIT-Lizenz. Extern verlinkte Inhalte behalten ihre jeweiligen Rechte. Keine Übernahme fremder Fachtexte.
+Für die eigenen Texte und den Quellcode wurde noch keine Open-Source-Lizenz festgelegt; die Entscheidung darüber liegt beim Repository-Inhaber. Extern verlinkte Inhalte behalten ihre jeweiligen Rechte. Keine Übernahme fremder Fachtexte.
 
 **Version:** 0.1.0 (MVP)
+
+## Demo und Qualitätsstatus
+
+- Repository: https://github.com/vnipo01-coder/Gespr-chstraining
+- Voraussichtliche GitHub-Pages-Adresse nach erfolgreicher Aktivierung: https://vnipo01-coder.github.io/Gespr-chstraining/
+- Automatisierter Smoke-Test: `node tests/smoke.cjs` (Routing, Daten, Quellenschlüssel, Sicherheitsgrenzen).
+- Die Sprachausgabe verwendet die Browserfunktion Speech Synthesis; die optionale Spracherkennung ist browserabhängig und kann Daten an einen externen Anbieter übermitteln. Die Website besitzt keinen eigenen Upload-Endpunkt.
+- Geplante Ausbaustufen: grösserer wissenschaftlich belegter Etymologiekatalog, Audioanalysen nur nach ausdrücklicher Zustimmung, adaptiver Lernpfad und weitere Rhetorik- und Meditationstexte.
+
