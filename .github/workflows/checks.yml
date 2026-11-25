@@ -1,0 +1,27 @@
+name: LOGOS ATELIER quality checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JavaScript syntax
+        run: |
+          node --check data.js
+          node --check app.js
+      - name: Run research and user-interface smoke tests
+        run: node tests/smoke.cjs
+      - name: Check required app files
+        run: |
+          test -s index.html
+          test -s styles.css
+          test -s README.md
