@@ -1,3 +1,35 @@
+# LOGOS ATELIER · Version 0.2 — Sprachlexikon und Rhetorik-Coaching
+
+**Stand: 25. November 2026 · direkt in `main` integriert.** Das Projekt befindet sich in einer frühen, fortlaufend erweiterten Entwicklungsphase. Die Veröffentlichung auf GitHub Pages hängt von der Aktivierung von GitHub Actions/Pages im Repository ab; die öffentliche Auslieferung wurde nicht als abgeschlossen bestätigt.
+
+## Ausbau dieser Entwicklungsstufe
+
+**139 Lexikoneinträge:** 18 vorhandene plus **121 neue**: 62 deutsche Kompositionsanalysen, 30 Ableitungen mit Suffix, 12 Präfixanalysen und 17 fachwissenschaftliche Begriffe zu Phonetik, Phonologie und Wortbildung. Alle neuen Beispiele enthalten eine Wortzerlegung, eine Erklärung der fachlichen Regeln und eine Anwendung für die sprachliche Praxis. Die Wortbildungssystematik ist mit konkreten Originalbeiträgen des **Leibniz-Instituts für Deutsche Sprache (grammis)** verknüpft. **Wichtig: Eine synchrone Morphemzerlegung ist nicht automatisch eine historisch nachgewiesene Etymologie.** Die einzelnen Anwendungsbeispiele sind neu verfasst und keine wörtlich übernommenen oder einzeln historisch belegten IDS-Beispiele.
+
+**16 ausführliche Vorlesetexte:** Acht neue mehrabsätzige Sprecheinheiten ergänzen das vorhandene Rhetorikstudio. Themen: Argumente prüfen, freundlicher Widerspruch, komplexe Sachverhalte erklären, schwierige Gespräche strukturieren, Präsentationsanfang, kritische Rückfragen, Fachfallpräsentationen und kompaktes Storytelling. Die Texte sind nach Grundlage, Aufbau, Vertiefung und Transfer filterbar. Sie sind **Übungsvorschläge, keine standardisierten klinischen Programme**.
+
+**Lokale Audio-Reflexion:** Neue freiwillige Mikrofonsitzung mit live visualisiertem Pegelverlauf und grober Schätzung längerer leiser Phasen. Die Implementierung verwendet **getUserMedia + Web Audio AnalyserNode**, nicht MediaRecorder: Das Signal wird im Browser verarbeitet, nicht aufgezeichnet, hochgeladen oder als Rohdaten dauerhaft gespeichert. Alle Tracks werden beim Stoppen und beim Navigieren aus dem Rhetorikstudio beendet. Nach der Zustimmung ist etwa **eine Sekunde Ruhe** zur Umgebungspegel-Kalibrierung sinnvoll.
+
+**Aussagegrenzen:** Eine Pegelmessung kann Hintergrundgeräusche, tatsächliche Sprechpausen, Klarheit, Selbstbewusstsein oder rhetorische Qualität **nicht zuverlässig unterscheiden oder bewerten**. Gemessene Zeitanteile sind heuristische Hinweise, keine validierten Redequalitätswerte. Die bisherige **optionale Browser-Spracherkennung** bleibt unabhängig davon; diese kann je nach Browser einen externen Dienst nutzen. Für rein lokale Pegelanalyse ist eine Spracherkennung nicht nötig.
+
+**Inhaltlich dokumentierte Quellen:**
+- [IDS grammis: Komposition](https://grammis.ids-mannheim.de/systematische-grammatik/585)
+- [IDS grammis: Derivation](https://grammis.ids-mannheim.de/systematische-grammatik/631)
+- [IDS grammis: Fugenelement](https://grammis.ids-mannheim.de/systematische-grammatik/551)
+- [IDS grammis: Morphem](https://grammis.ids-mannheim.de/terminologie/482)
+- [IDS grammis: Phonem](https://grammis.ids-mannheim.de/terminologie/908)
+- [IDS grammis: Intonation](https://grammis.ids-mannheim.de/systematische-grammatik/2336)
+- [MDN: Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API)
+- [MDN: SpeechRecognition und externe Spracherkennungsdienste](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition)
+
+## Architektur und Tests
+
+Neue Dateien: `lexicon-v2.js` (lexikalischer Korpus), `rhetoric-v2.js` (Vorlesetexte), `audio-coach.js` (lokale Analyse), `tests/audio-coach.cjs` (Mikrofon-Lebenszyklus). Aktualisiert: `app.js`, `index.html`, `styles.css`, `tests/smoke.cjs`, `.github/workflows/checks.yml`.
+
+Die isolierte Integrationsprüfung bestätigte: **acht Ansichten**, **139 eindeutige Lexikoneinträge**, **16 Sprechübungen**, **20 hinterlegte Quellen**, korrekte Modulladereihenfolge und konsistente Quellenverweise. Die simulierte Audio-Prüfung bestätigte den freiwilligen Start, Echtzeitpegel, Pausenschätzung sowie vollständiges Stoppen der Mikrofonspuren, der AudioContext-Instanz und der Animationsschleife. Die GitHub-Actions-Checks und eine visuelle End-to-End-Prüfung auf realen Browsern und Geräten müssen gesondert bestätigt werden.
+
+---
+
 # LOGOS ATELIER – Sprache verstehen. Präsenz entwickeln.
 
 Eine eigenständige, deutschsprachige, statische Web-App für sprachwissenschaftliche Neugier, systematisches Sprechtraining und optional meditative Selbstreflexion.
