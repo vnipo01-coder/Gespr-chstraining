@@ -231,3 +231,34 @@ button:disabled{opacity:.45;cursor:not-allowed}
 .lab-result p{margin:8px 0}
 .lab-result .pills{margin-top:8px}
 @media(max-width:1000px){.lab-tools{grid-template-columns:1fr}.lab-tool>p{min-height:0}}
+
+
+/* 0.2: Feingliedrige Sprachwissenschaft, lokale Mikrofondaten und zugängliche Interaktion. */
+.lex-category-label{display:flex;align-items:center;gap:9px;color:#738099;font-size:11px;font-weight:800;white-space:nowrap}
+.lex-category{appearance:auto;background:#fff;border:1px solid #dfe4ef;border-radius:11px;padding:13px 14px;color:#52618a;max-width:250px;font-size:12px}
+.local-audio{margin-top:44px;border-top:1px solid #e4e8f1;padding-top:30px}
+.local-audio-header{display:flex;align-items:start;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.local-audio-header h3{font-size:24px;color:#2b3858;margin:14px 0 9px}
+.local-audio-header p{color:#6b7790;font-size:12px;line-height:1.85;max-width:67ch;margin-bottom:0}
+.local-audio-status{border:1px solid #e4e8f1;border-radius:20px;background:#f8f9fe;color:#697895;padding:9px 13px;font-size:11px;font-weight:750}
+.local-audio-status[data-kind=active]{background:#ecf9f4;color:#267453;border-color:#cfece1}
+.local-audio-status[data-kind=error]{background:#fff1f2;color:#a83b55;border-color:#f6dce2}
+.local-audio-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:25px}
+.audio-privacy{font-size:11px;color:#78869b;margin-left:auto;font-weight:700}
+.audio-privacy span{color:#3caa8b;font-size:13px}
+.audio-live{padding:20px;background:#fafbff;border:1px solid #e6eaf3;border-radius:14px;margin-top:19px}
+.audio-level{display:flex;align-items:center;gap:13px;flex-wrap:wrap;color:#68748e;font-size:12px;font-weight:800;margin-bottom:15px}
+.audio-level-bg{height:8px;min-width:125px;flex:1;border-radius:12px;background:#dfe4f3;overflow:hidden}
+.audio-level-bg>div{height:100%;width:0;background:linear-gradient(90deg,#6c8fce,#7d5cc5);transition:width .08s}
+.audio-level>small{font-size:11px;color:#7886a0;min-width:110px}
+#audioTimeline{display:block;width:100%;max-height:140px;border-radius:8px}
+.audio-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:13px}
+.audio-metrics>div{background:#fff;border:1px solid #e7eaf3;border-radius:13px;padding:16px}
+.audio-metrics strong{display:block;color:#6550ab;font-size:24px;font-variant-numeric:tabular-nums;font-weight:850}
+.audio-metrics span{display:block;color:#738097;font-size:10px;line-height:1.65;font-weight:750;margin-top:5px}
+.audio-feedback{padding:18px 20px;border-left:3px solid #6a5bc0;border-radius:0 9px 9px 0;background:#f6f2fd;color:#5a6382;font-size:12px;line-height:1.9;margin:18px 0 0}
+.audio-feedback b{color:#433b83}
+.audio-disclaimer{font-size:11px;line-height:1.8;color:#8793a6;margin-top:13px}
+@media(max-width:920px){.lex-category-label{width:100%}.lex-category{max-width:none;flex:1}.audio-privacy{margin-left:0}}
+@media(max-width:560px){.audio-metrics{grid-template-columns:1fr}.audio-metrics>div{padding:13px}.audio-metrics strong{font-size:20px}.local-audio-controls .primary-btn,.local-audio-controls .secondary-btn{width:100%}.audio-live{padding:13px}.local-audio-status{font-size:10px}.lex-category-label{flex-wrap:wrap}}
+@media print{.local-audio-controls,.audio-live{display:none!important}.audio-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
