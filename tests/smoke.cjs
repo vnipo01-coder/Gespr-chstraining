@@ -31,6 +31,6 @@ assert(T.language().includes('id="freeWord"')&&T.language().includes('id="discou
 assert(T.studio().includes("Spracherkennung"),"Mic privacy disclosure missing");
 assert(T.meditate().includes("Schwindel"),"Breathing safety guidance missing");
 assert(T.chakraPage().includes("wissenschaftlicher"),"Chakra evidence boundary absent");
-assert(T.references().includes("method"),"Source explanation missing");
+assert(T.references().includes("Wie werden Aussagen dargestellt?"),"Source explanation missing");
 assert(typeof events["document:click"]==="function","Delegated interactivity missing");
 console.log("LOGOS ATELIER smoke passed: 8 views, "+D.lexicon.length+" terms, "+D.drills.length+" speaking drills, "+D.chakras.length+" cultural symbols, "+T.sourceCount+" referenced sources.");
